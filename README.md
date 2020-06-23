@@ -4,20 +4,15 @@
 
 ## Project description ##
 ```
-explore california is a travel company website has over 100,000 visit per month (http://explorecalifornia.org/) and want to ship new features faster, 
-safely and
-more reliably ? how can DevOps fix this ?
-Production deploys 100% automated through CI & CD pipelines
-The CI pipeline into production builds a website on the fly & run unit tests 
-before every pull request enters review.
-The CD pipeline deploys the website artifacts into AWS using terraform
-a separate pipeline runs daily to merge the master branches from each dev team
-into an integration environment than runs integratiosn tests and report failures
-to each dev teams
-
-
-
-
+explore california is a travel company website has over 100,000 visit per month (http://explorecalifornia.org/) and want to ship new
+features faster,safely and more reliably ? how can DevOps fix this ?
+Production deploys 100% automated through CI & CD pipelines. The CI pipeline into production builds a website on the fly & run unit
+tests before every pull request enters review.
+The CD pipeline deploys the website artifacts into AWS using terraform, a separate pipeline runs daily to merge the master branches 
+from each dev team into an integration environment that runs integratiosn tests and report failures to each dev teams which makes
+testing easier.
+All envorinoments are consistent thanks to Docker / Docker compose as devellopers can npow use the same libraries & tool chains as 
+what's available in production 
 ```
 
 
