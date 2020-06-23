@@ -4,8 +4,8 @@
 
 ## Project description ##
 ```
-explore california is a travel company website has over 100,000 visit per month 
-(http://explorecalifornia.org/) and want to ship new features faster, safely and
+explore california is a travel company website has over 100,000 visit per month (http://explorecalifornia.org/) and want to ship new features faster, 
+safely and
 more reliably ? how can DevOps fix this ?
 Production deploys 100% automated through CI & CD pipelines
 The CI pipeline into production builds a website on the fly & run unit tests 
