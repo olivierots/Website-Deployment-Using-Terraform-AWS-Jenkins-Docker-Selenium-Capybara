@@ -31,5 +31,5 @@ resource "aws_s3_bucket" "jesuisfatiguer" {
 }
 
 output "jesuisfatiguer_bucket_url" {
-  value = "${aws_s3_bucket.jesuisfatiguer.website_endpoint}"
+  value = "${aws_s3_bucket.jesuisfatiguer.website_endpoint}"   #url to access the website on the internet
 }
