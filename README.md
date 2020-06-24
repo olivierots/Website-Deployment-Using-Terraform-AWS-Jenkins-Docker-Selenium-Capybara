@@ -16,15 +16,14 @@ All envorinoments are consistent thanks to Docker / Docker compose as develloper
 libraries & tool chains as what's available in production.
 ```
 
-
 ## Learning objectives ##
 ```
-* Writing a Dockerfile to run the website locally
+* Writing a Dockerfile to run the website locally with Docker 
 * Using Docker Compose
 * Testing the app with RSpec, Capybara, Selenium to talk to a real browser & test elements from it
 * Writing Terraform code to deploy the website into an AWS s3 bucket to host the website
 * Writing and running integration tests
-* Writing a CI/CD pipeline with Jenkins that will build, test, and deploy the app.
+* Writing an automated CI/CD pipeline with Jenkins that will build, test, and deploy the app.
 * apply DevOps principles to a sample app for a travel booking company
 
 ```
@@ -34,24 +33,23 @@ libraries & tool chains as what's available in production.
 * installed rspec, capybara, selenium-webdriver using a dockerfile then containerized the website using nginx
 * created a docker-compose manifest & configured the below services / containers:
   - the website: configured the port it will serving on & start the website locally
-  - Jenkins
-  - awcli
+  - Jenkins to build CI pipeline & run tests on every commit for quality releases
+  - awcli: used to copy the website into the aws s3 bucket
   - terraform: to allow us to deploy the website onto a real env. (aws)
   - selenium: configured it for other containers to have access to it too
   - unit-tests: make the test available in the container
-  - integration-tests
+  - integration-tests: to run agaisnt the copy of our website on the internet 
   
-* configured a simple unit test using RSpec, Capybara & Selenium to show the website logo
-* created an s3 bucket, confugured the bucket & iam policies then configured it to run as a website using terrafrom
-
-* the website on the internet rathenr than testing locally.
-* wrote terraform code  
-* Used selenium, capybara & RSpec to write some units and integrations tests
-* used terrafrom to deploy the working instance into the cloud
-* wrote a CI/CD with jenkins to build, test & deploy the website
-
+* wrote a simple unit test using RSpec, Capybara & Selenium to show the website logo
+* set up my iam user & secret keys etc.
+* created an s3 bucket, configured the bucket & iam policies then configured it to run as a website using terrafrom
+  then test the website on the internet rather than testing locally.
+* deployed the website onto the configured bucket using the aws s3 cp command & tested the website works in the cloud
+* wrote the integration tests to run agaisnt the newly created website URL
+* wrote a CI/CD pipeline with a jenkinsfile to automate the build, test & the website deployment
 ```
 
+## others useful pointers ##
 ```
 * Dockerfile: manifest that describe the image that the container will use
 * RSpec: ruby based testing framework, its DSL declarative & easy to read / understand.
@@ -59,9 +57,9 @@ libraries & tool chains as what's available in production.
             interact with the website e.g get the html of the website, run javascripts & test 
             different functionalities.
 * Selenium: webdriver that spin up a real web browser and test it against whatever the web browser sees.
-* Terrafrom: golang based tool that allow us to deploys any sort of infra into any sort of env
+* Terrafrom: golang based tool that allows us to deploys & provision any sort of infra into any sort of env
 ```
-## unit tests results ##
+## local unit tests results ##
 ```
 [jenkins@olivier-linux-server devops-projects]$ docker-compose run --rm unit-tests
 including Capybara::DSL in the global scope is not recommended!
