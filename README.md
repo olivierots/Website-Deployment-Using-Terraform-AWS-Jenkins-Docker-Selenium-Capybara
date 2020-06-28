@@ -57,7 +57,7 @@ libraries & tool chains as what's available in production.
             interact with the website e.g get the html of the website, run javascripts & test 
             different functionalities.
 * Selenium: webdriver that spin up a real web browser and test it against whatever the web browser sees.
-* Terrafrom: golang based tool that allows us to deploys & provision any sort of infra into any sort of env
+* Terrafrom: golang based tool used to deploy & provision any sort of infra into any sort of env
 ```
 ## local unit tests results ##
 ```
