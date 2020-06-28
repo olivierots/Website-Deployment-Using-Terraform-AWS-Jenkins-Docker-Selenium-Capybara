@@ -30,7 +30,7 @@ libraries & tool chains as what's available in production.
 
 ## Technical stuff i've done to achieve this ##
 ```
-* installed rspec, capybara, selenium-webdriver using a dockerfile then containerized the website using nginx
+* installed rspec, capybara, selenium-webdriver using a dockerfile & used an nginx image which will host my website
 * created a docker-compose manifest & configured the below services / containers:
   - the website: configured the port it will serving on & start the website locally
   - Jenkins to build CI pipeline & run tests on every commit for quality releases
@@ -40,12 +40,12 @@ libraries & tool chains as what's available in production.
   - unit-tests: make the test available in the container
   - integration-tests: to run agaisnt the copy of our website on the internet 
   
-* wrote a simple unit test using RSpec, Capybara & Selenium to show the website logo
-* set up my iam user & secret keys etc.
-* created an s3 bucket, configured the bucket & iam policies then configured it to run as a website using terrafrom
-  then test the website on the internet rather than testing locally.
+* wrote a simple unit test using rspec, capybara & selenium to show the website logo
+* set up my iam user & secret keys etc. for aws authentication 
+* wrote the terraform code to create an s3 bucket, configured the bucket & iam policies. 
 * deployed the website onto the configured bucket using the aws s3 cp command & tested the website works in the cloud
-* wrote the integration tests to run agaisnt the newly created website URL
+* tested the website locally.
+* wrote the integration tests to run agaisnt the newly created website URL on the internet this time
 * wrote a CI/CD pipeline with a jenkinsfile to automate the build, test & the website deployment
 ```
 
