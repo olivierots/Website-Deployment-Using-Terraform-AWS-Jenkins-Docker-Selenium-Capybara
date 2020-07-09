@@ -28,8 +28,10 @@ libraries & tool chains as what's available in production.
 
 ```
 
-## Technical stuff i've done to achieve this ##
+
 ```
+## Technical implmentation step by step ##
+
 * installed rspec, capybara, selenium-webdriver using a dockerfile & used an nginx image which will host my website
 * created a docker-compose manifest & configured the below services / containers:
   - the website: configured the port it will serving on & start the website locally
