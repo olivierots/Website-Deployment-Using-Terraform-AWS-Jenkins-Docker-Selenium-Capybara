@@ -19,7 +19,6 @@ libraries & tool chains as what's available in production.
 ## Learning objectives ##
 ```
 * Writing a Dockerfile to run the website locally with Docker 
-* Using Docker Compose
 * Testing the app with RSpec, Capybara, Selenium to talk to a real browser & test elements from it
 * Writing Terraform code to deploy the website into an AWS s3 bucket to host the website
 * Writing and running integration tests
