@@ -35,7 +35,7 @@ libraries & tool chains as what's available in production.
 * created a docker-compose manifest & configured the below services / containers:
   - the website: configured the port it will serving on & start the website locally
   - Jenkins to build CI pipeline & run tests on every commit for quality releases
-  - awcli: used to copy the website into the aws s3 bucket
+  - awcli: used to copy the website to the aws s3 bucket
   - terraform: to allow us to deploy the website onto a real env. (aws)
   - selenium: configured it for other containers to have access to it too
   - unit-tests: make the test available in the container
